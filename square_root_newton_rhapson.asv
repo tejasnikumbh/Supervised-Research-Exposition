@@ -8,29 +8,23 @@
 
 function [iter,root] = square_root_newton_rhapson(n)
 
-    % Specifying required precision
+    % Defining points
+    x1 = 0;
+     
+    % Function values at those points
+    funcX1 = x1*x1 - n;
+    funcX1Deriv = 2*x1;
     
+    % Signs of function values at those points.
+    
+    % Defining error and precision.
+    error = funcXMid;
     precision = 0.00001;
     
-    % Initializer step before for loop
-    x1 = n;
-    error = x1*x1 - n;
+    % Defining number of iterations
     iter = 0;
-    
-    % Looping until error is as small as required.
-    while(abs(error)>precision)
-        % New components for point update
-        funcX1 = x1*x1 - n;
-        funcX1Deriv = 2*x1;
-        
-        % Update step
-        x1 = x1 - funcX1/funcX1Deriv;
-        error = x1*x1 - n;
-        
-        iter = iter + 1;
-    end % End of while loop
-    
-    root = x1;
-    
+   
+
+
 end
 
