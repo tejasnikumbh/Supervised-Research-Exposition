@@ -7,26 +7,30 @@
 % method.                                                                 % 
 % ----------------------------------------------------------------------- %
 
-function [iter,root] = square_root_bisection(n)
+function [iter,root] = square_root_false_pos(n)
+    
+    % Defining required precision
+    precision = 0.00001;
     
     % Defining points
     x1 = 0;
     x2 = n;
-    xMid = (x1 + x2)/2;
     
     % Function values at those points
     funcX1 = x1*x1 - n;
     funcX2 = x2*x2 - n;
+    
+    xMid = x2 - funcX2*(x2-x1)/(funcX2-funcX1);
     funcXMid = xMid*xMid - n;
+
     
     % Signs of function values at those points.
     signfX1 = sign(funcX1);
     signfX2 = sign(funcX2);
     signfXMid = sign(funcXMid);
     
-    % Defining error and precision.
+    % Defining error.
     error = funcXMid;
-    precision = 0.00001;
     
     % Defining number of iterations
     iter = 0;
@@ -40,21 +44,27 @@ function [iter,root] = square_root_bisection(n)
         else
             x2 = xMid;    
         end
-        
-        % Performing updates on values accordingly
-        xMid = (x1+x2)/2;
     
+        % Function values at those points
         funcX1 = x1*x1 - n;
         funcX2 = x2*x2 - n;
+    
+        xMid = x2 - funcX2*(x2-x1)/(funcX2-funcX1);
         funcXMid = xMid*xMid - n;
-            
+
+    
+        % Signs of function values at those points.
         signfX1 = sign(funcX1);
         signfX2 = sign(funcX2);
         signfXMid = sign(funcXMid);
     
+        % Defining error and precision.
         error = funcXMid;
+        
         iter = iter + 1;
+        
     end % End of while loop
+    
     root = xMid;
     
 end % End of function

@@ -24,14 +24,13 @@ for i=1:1000
 end
 
 % Plotting the results for All 4 methods
-plot(iterBisection,'r');
-hold on;
-plot(iterNewtonRhapson,'g');
-hold on;
-plot(iterSecant,'b');
-hold on;
-plot(iterFalsePos,'y');
-hold on;
-legend('Bisection','Newton Rhapson','Secant');
+%plot(iterBisection,'r');
+%hold on;
+%plot(iterNewtonRhapson,'g');
+%hold on;
+%plot(iterSecant,'b');
+%hold on;
+%plot(iterFalsePos,'m');
+%hold on;
 end
 
