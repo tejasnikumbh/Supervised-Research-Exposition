@@ -1,5 +1,5 @@
-SRE Assignments - Numerical Methods for computing root of a function.
-=====================================================================
+SRE Assignments - Numerical Methods 
+====================================
 
 This file contains matlab code for computing the root of a function using the following three methods.
 
@@ -19,7 +19,7 @@ Here is a description of the contents of this repository.
 * report Folder
   - This folder contains a report outlining the conclusions and ifnerences drawn from the comparisons done in the main program.
 
-SRE Report
-==========
+SRE Report - Limited Precision Neural Nets
+==========================================
 * Effect of Changing Bit Precision on Training Accuracy of Neural Networks
   - Paper describing the analysis and conclusions drawn during research
